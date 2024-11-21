@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food and Clothes Donation</title>
+    <link rel="stylesheet" href="./css/donations.css">
+    <a href=""
+</head>
+<body>
+   
+    <!-- Main Section with Headers -->
+    <a href="index.html">Back to Home</a>
+    <div class="main-section">
+        <h1>Food and Clothes Donation</h1>
+        <div class="button-container">
+            <button class="food-btn" onclick="showFoodForm()">Start Food Donation</button>
+            <button class="clothes-btn" onclick="showClothesForm()">Start Clothes Donation</button>
+        </div>
+    </div>
+
+    <!-- Food Donation Form -->
+    <div id="food" class="form-section">
+        <h2>Food Donation</h2>
+        <label for="persons">How many persons can eat:</label>
+        <input type="number" id="persons" name="persons" placeholder="Enter the number of persons" oninput="checkFoodForm()">
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" onchange="checkFoodForm()">
+        
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" onchange="checkFoodForm()">
+        
+        <button id="donate-food-btn" class="donate-btn" onclick="showOrphanageProfiles('food')">Donate Now</button>
+    </div>
+
+    <!-- Clothes Donation Form -->
+    <div id="clothes" class="form-section">
+        <h2>Clothes Donation</h2>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" onchange="checkClothesForm()">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="age-group">Age Group:</label>
+        <select id="age-group" name="age-group" onchange="checkClothesForm()">
+            <option value="">Select Age Group</option>
+            <option value="children">Children (0-12 years)</option>
+            <option value="teenagers">Teenagers (13-19 years)</option>
+            <option value="adults">Adults (20+ years)</option>
+        </select>
+        
+        <label for="pairs">Number of Pairs:</label>
+        <input type="number" id="pairs" name="pairs" placeholder="Enter the number of pairs" oninput="checkClothesForm()">
+        
+        <button id="donate-clothes-btn" class="donate-btn" onclick="showOrphanageProfiles('clothes')">Donate Now</button>
+    </div>
+
+    <!-- Orphanage Profiles Section -->
+    <div id="profile-container" class="profile-container" style="display: none;">
+        <h2>Orphanage Profiles</h2>
+        <div class="profile">
+            <img src="https://via.placeholder.com/300x200" alt="Orphanage 1">
+            <h2>Happy Hearts Orphanage</h2>
+            <p>Location: 123 Main St, City A</p>
+            <p>Capacity: 50 children</p>
+            <p>Contact: +123-456-7890</p>
+        </div>
+
+        <div class="profile">
+            <img src="https://via.placeholder.com/300x200" alt="Orphanage 2">
+            <h2>Sunshine Kids Orphanage</h2>
+            <p>Location: 456 Elm St, City B</p>
+            <p>Capacity: 40 children</p>
+            <p>Contact: +987-654-3210</p>
+        </div>
+
+        <div class="profile">
+            <img src="https://via.placeholder.com/300x200" alt="Orphanage 3">
+            <h2>Bright Futures Orphanage</h2>
+            <p>Location: 789 Pine St, City C</p>
+            <p>Capacity: 60 children</p>
+            <p>Contact: +555-123-4567</p>
+        </div>
+    </div>
+
+    <!-- Orphanage Selection Dropdown -->
+    <div id="orphanage-select-section" class="orphanage-select-section" style="display: none;">
+        <h3>Select an Orphanage</h3>
+        <select id="orphanage-select" onchange="showFinalDonateButton()">
+            <option value="">Select an orphanage</option>
+            <option value="Happy Hearts Orphanage">Happy Hearts Orphanage</option>
+            <option value="Sunshine Kids Orphanage">Sunshine Kids Orphanage</option>
+            <option value="Bright Futures Orphanage">Bright Futures Orphanage</option>
+        </select>
+        <button id="final-donate-btn" class="donate-btn" onclick="finalDonation()" style="display: none;">Donate Now</button>
+    </div>
+
+    <script src="./js/donations.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* CSS for the login page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Background for the login page */
+#loginPage {
+    background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg');
+    background-size: cover;
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for form */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px; /* Set a fixed width */
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    width: 80%; /* Full width */
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.show-password-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffc107; /* Button color */
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%; /* Full width for login button */
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background-color: #000; /* Back button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

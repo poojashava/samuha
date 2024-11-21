@@ -1,0 +1,124 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://static.vecteezy.com/system/resources/previews/000/688/286/original/charity-and-donation-vector.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Center the content on the first page */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+/* Hidden form sections */
+.form-section {
+    display: none;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: left;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input and select styles */
+input, select {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Donation button */
+.donate-btn {
+    display: none;
+    background-color: rgba(50, 205, 50, 0.8);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Orphanage profiles section */
+.profile-container, .orphanage-select-section {
+    display: none;
+    margin-top: 50px;
+}
+
+.profile {
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    text-align: left;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.profile h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    color: #666;
+    font-size: 1em;
+}
+
+/* Background transition based on donation type */
+.food-bg {
+    background: url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/03/18/17/istock-1127566187.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.clothes-bg {
+    background: url('https://images.seattleschild.com/wp-content/uploads/2020/05/iStock-856564654.jpg') no-repeat center center fixed;
+    background-size: cover;
+}

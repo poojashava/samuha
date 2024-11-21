@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuhamitra Community</title>
+    <link rel="stylesheet" href="./css/prelogss.css">
+</head>
+<body>
+    <!-- Header with Logo and Website Title -->
+    <header class="header">
+        <img src="./assets/samuicon.jpg" alt="Samuhamitra Logo" class="logo">
+        <h1 class="website-title">Samuhamitra Community</h1>
+        <a href="login.html" class="login-btn">LOGIN</a>
+    </header>
+
+    <!-- Image Slideshow -->
+    <div class="slideshow">
+        <div class="slide active" style="background-image: url('https://www.tiss.edu/uploads/images/IMG_9709_2.jpeg');">
+            <div class="slide-content">
+                <p class="slide-text">Welcome to Samuhamitra, a place for empowering our community.</p>
+                <button class="explore-btn" onclick="scrollToSection('what-we-do')">Explore</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://media.licdn.com/dms/image/v2/D5622AQFzNIhoe916Qw/feedshare-shrink_800/feedshare-shrink_800/0/1724223804255?e=2147483647&v=beta&t=a7vdqoa4aG_xbb5lPMgcWDbPvkhrC_4hFZL0l2kqN7U');">
+            <div class="slide-content">
+                <p class="slide-text">Join us in our efforts to foster community engagement.</p>
+                <button class="explore-btn" onclick="scrollToSection('what-we-do')">Explore</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- "What We Do" Section -->
+    <section id="what-we-do" class="what-we-do">
+        <h2>What We Do</h2>
+        <p>Our community-driven efforts focus on promoting positive change through collective action and engagement.</p>
+        <div class="image-row">
+            <div class="image-box" style="background-image: url('https://www.balavikasa.org/uploads/blogs/critical-medical-equipment-medical-and-essential-supplies-help-communities-survive-covid-second-wave-in-telangana298.jpg');">
+                <p class="image-desc">Providing essential medical supplies to underserved communities.</p>
+            </div>
+            <div class="image-box" style="background-image: url('https://vishvumiyafoundation.org/public/assets/images/event-gallery/103/214a4427-20231212112433.jpg');">
+                <p class="image-desc">Organizing community events for health awareness and education.</p>
+            </div>
+            <div class="image-box" style="background-image: url('https://vishvumiyafoundation.org/public/assets/images/event-image/whatsapp-image-2024-08-02-at-32253-pm-20240802052307.jpeg');">
+                <p class="image-desc">Promoting sustainable practices through community workshops.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- "Our Communities" Section -->
+    <section id="our-communities" class="our-communities">
+        <h2>Our Communities</h2>
+        <div class="community-row">
+            <div class="community-box" style="background-image: url('https://5.imimg.com/data5/SG/CY/MY-51212786/gated-community-villas-in-hyderabad-500x500.jpg');">
+                <p class="community-desc">Gated Community in Hyderabad - Close to Hi-Tech City.</p>
+            </div>
+            <div class="community-box" style="background-image: url('https://buildoninfra.com/wp-content/uploads/2024/07/The-Rise-of-Gated-Communities-in-Hyderabad.png');">
+                <p class="community-desc">Luxury Villas Community - Near Financial District.</p>
+            </div>
+            <div class="community-box" style="background-image: url('https://www.modibuilders.com/wp-content/uploads/screenshot-www.modibuilders.com-2018.06.02-11-59-41.png');">
+                <p class="community-desc">Modern Apartment Community - In Gachibowli.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="maps-section">
+        <h2>Our Locations</h2>
+        <div class="map-row">
+            <iframe src="https://maps.google.com/maps?q=17.4448,78.3498&z=15&output=embed" class="gmap"></iframe>
+            <iframe src="https://maps.google.com/maps?q=17.4239,78.3719&z=15&output=embed" class="gmap"></iframe>
+            <iframe src="https://maps.google.com/maps?q=17.4467,78.3578&z=15&output=embed" class="gmap"></iframe>
+        </div>
+    </section>
+
+    <!-- "Contact Us" Section -->
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- "Feedback" Section -->
+    <section class="feedback">
+        <h2>Feedback</h2>
+        <form id="feedback-form">
+            <input type="text" placeholder="Your Name" required>
+            <textarea placeholder="Your Feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <script src="./js/prelogjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuhamitra - Guest's Arrival</title>
+    <link rel="stylesheet" href="./css/guestarr.css">
+</head>
+<body>
+
+<div class="container" id="selection-container">
+    <h1>Guest's Arrival</h1>
+    <div id="buttons-container">
+        <div class="button-group">
+            <h2>Rooms 101-110</h2>
+            <button onclick="navigateToPage('101')">101</button>
+            <button onclick="navigateToPage('102')">102</button>
+            <button onclick="navigateToPage('103')">103</button>
+            <button onclick="navigateToPage('104')">104</button>
+            <button onclick="navigateToPage('105')">105</button>
+            <button onclick="navigateToPage('106')">106</button>
+            <button onclick="navigateToPage('107')">107</button>
+            <button onclick="navigateToPage('108')">108</button>
+            <button onclick="navigateToPage('109')">109</button>
+            <button onclick="navigateToPage('110')">110</button>
+        </div>
+        <div class="button-group">
+            <h2>Rooms 201-210</h2>
+            <button onclick="navigateToPage('201')">201</button>
+            <button onclick="navigateToPage('202')">202</button>
+            <button onclick="navigateToPage('203')">203</button>
+            <button onclick="navigateToPage('204')">204</button>
+            <button onclick="navigateToPage('205')">205</button>
+            <button onclick="navigateToPage('206')">206</button>
+            <button onclick="navigateToPage('207')">207</button>
+            <button onclick="navigateToPage('208')">208</button>
+            <button onclick="navigateToPage('209')">209</button>
+            <button onclick="navigateToPage('210')">210</button>
+        </div>
+        <div class="button-group">
+            <h2>Rooms 301-310</h2>
+            <button onclick="navigateToPage('301')">301</button>
+            <button onclick="navigateToPage('302')">302</button>
+            <button onclick="navigateToPage('303')">303</button>
+            <button onclick="navigateToPage('304')">304</button>
+            <button onclick="navigateToPage('305')">305</button>
+            <button onclick="navigateToPage('306')">306</button>
+            <button onclick="navigateToPage('307')">307</button>
+            <button onclick="navigateToPage('308')">308</button>
+            <button onclick="navigateToPage('309')">309</button>
+            <button onclick="navigateToPage('310')">310</button>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="note-container" style="display: none;">
+    <a href="#" class="back-button" onclick="goBack()">← Back</a>
+    <h2 id="note-heading"></h2>
+
+    <div>
+        <label for="guest-name">Name:</label>
+        <input type="text" id="guest-name" disabled>
+    </div>
+    <div>
+        <label for="guest-contact">Contact Number:</label>
+        <input type="text" id="guest-contact" disabled>
+    </div>
+
+    <!-- File upload section -->
+    <div class="file-upload">
+        <label for="file-input">Upload File:</label>
+        <input type="file" id="file-input" accept=".jpg,.jpeg,.png,.pdf">
+        <button id="upload-button" onclick="uploadFile()">Upload</button>
+        <button id="delete-selected-button" onclick="deleteSelectedFiles()" style="display: none;">Delete Selected Files</button>
+        <div id="file-preview"></div> <!-- Display uploaded files -->
+    </div>
+
+    <!-- Edit and save buttons -->
+    <div class='edit-buttons'>
+        <!-- Edit and save buttons -->
+        <button id='edit-button' style='display: none;' onclick='editGuestInfo()'>Edit</button>
+        <button id='save-edit-button' style='display: none;' onclick='saveGuestInfo()'>Save</button>
+
+        <!-- Notes section -->
+        <textarea id='note-text' placeholder='Write your notes here...'></textarea>
+
+        <!-- Notes action buttons -->
+        <div class='notes-actions'>
+            <button id='save-button' onclick='saveNotes()'>Save Notes</button>
+            <button id='delete-button' onclick='deleteNotes()'>Delete Notes</button> 
+        </div> 
+    </div> 
+</div>
+
+<script src="./js/guestarr.js"></script>
+
+<!-- Add any additional scripts here -->
+
+<script>
+// JavaScript functions (e.g., navigateToPage, uploadFile, etc.) should be included here or in guestarr.js
+// Ensure that all necessary functions are defined in guestarr.js
+// Example function to navigate to page
+function navigateToPage(roomNumber) {
+   localStorage.setItem("selectedGuest", roomNumber);
+   document.getElementById("selection-container").style.display = "none";
+   document.getElementById("note-container").style.display = "block";
+   loadGuestInfo(); // Load guest information based on room number
+   loadNotes(); // Load notes associated with the guest
+}
+</script>
+
+</body>
+</html>

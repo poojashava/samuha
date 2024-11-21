@@ -1,0 +1,225 @@
+/* General styling for the body and container */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header Section */
+  .header {
+    background-color: #2c3e50;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Filter Section */
+  
+  .filter-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Aligns the form horizontally */
+    align-items: center; /* Centers the items vertically */
+  }
+  
+  #search-form {
+    display: flex;
+    gap: 10px; /* Adds space between the search bar and the button */
+  }
+  
+  .filter-section input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .filter-section input[type="submit"] {
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    animation: blink 1.5s infinite;
+  }
+  /* Listings */
+  .listing-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .listing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+  }
+  
+  /* Image styling */
+  .listing img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Details section for the carpenter's name, rating, etc. */
+  .details {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .details h3 {
+    margin-bottom: 10px;
+  }
+  
+  .rating {
+    background-color: #28a745;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 20px;
+    animation: blink 1.5s infinite;
+  }
+  
+  .charges {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    animation: blink 1.5s infinite;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .actions button {
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .actions button.whatsapp {
+    background-color: #25D366;
+  }
+  
+  .call-button {
+    background-color: #ff4c4c;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    animation: blink 1.5s infinite;
+  }
+  
+  /* Blinking animation for icons and call button */
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  /* Background Image and Animation */
+/* Background Image and Animation */
+body {
+  background: url('https://habitatbroward.org/wp-content/uploads/2020/02/Community-Service-Raises-Social-Awareness.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  animation: backgroundZoom 20s infinite alternate;
+}
+
+@keyframes backgroundZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Transparent container for content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Transparent background for header */
+.header {
+  background-color: rgba(44, 62, 80, 0.8); /* Slightly transparent dark background */
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Listings section with slight transparency */
+.listing-section {
+  background-color: rgba(255, 255, 255, 0.5); /* Slightly transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.listing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7); /* More transparent for individual listings */
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* Make text a bit more readable with slight shadow */
+.details h3, .rating, .charges, .contact-info {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Slight text shadow for readability */
+}
+/* Back Button Styling */
+.back-button {
+  margin: 20px 0;
+}
+
+.back-button button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button button:hover {
+  background-color: #34495e;
+}

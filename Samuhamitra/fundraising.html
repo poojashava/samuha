@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Raising</title>
+    <link rel="stylesheet" href="./css/fundraising.css">
+    <script src="./js/fundraising.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fund Raising</h1>
+        <form id="donationForm">
+            <!-- Donor Details -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+
+            <!-- Donation Preferences -->
+            <label for="amount">Donation Amount (in INR)</label>
+            <input type="number" id="amount" name="amount" min="1" step="1" required>
+
+            <!-- Orphanage Selection -->
+            <label for="orphanage">Select Nearest Orphanage</label>
+            <select id="orphanage" name="orphanage" required>
+                <option value="Orphanage1">Orphanage 1, New Delhi</option>
+                <option value="Orphanage2">Orphanage 2, Mumbai</option>
+                <option value="Orphanage3">Orphanage 3, Bengaluru</option>
+                <option value="Orphanage4">Orphanage 4, Chennai</option>
+                <option value="Orphanage5">Orphanage 5, Hyderabad</option>
+            </select>
+
+            <label for="cause">Preferred Cause</label>
+            <select id="cause" name="cause">
+                <option value="general">General Fund</option>
+                <option value="education">Education Support</option>
+                <option value="healthcare">Healthcare Programs</option>
+                <option value="environment">Environment Initiatives</option>
+                <option value="charity">Charity Donation</option>
+            </select>
+
+            <!-- Payment Method -->
+            <label for="payment-method">Choose Payment Method</label>
+            <select id="payment-method" name="payment_method" required>
+                <option value="phonepe">PhonePe</option>
+                <option value="googlepay">Google Pay</option>
+                <option value="paytm">Paytm</option>
+                <option value="upi">Other UPI App</option>
+            </select>
+
+            <!-- Acknowledgment -->
+            <label for="anonymous">Would you like to remain anonymous?</label>
+            <select id="anonymous" name="anonymous">
+                <option value="no">No, acknowledge my donation</option>
+                <option value="yes">Yes, keep my donation anonymous</option>
+            </select>
+
+            <label>
+                <input type="checkbox" name="terms" required> I agree to the terms and conditions.
+            </label>
+
+            <button type="button" onclick="initiateUPIPayment()">Donate Now</button>
+            <button type="button" onclick="goToHomepage()">Back to Homepage</button>
+        </form>
+    </div>
+    <script src="./js/fundraising.js"></script>
+</body>
+</html>
