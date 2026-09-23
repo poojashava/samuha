@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuhamitra Admin</title>
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <header class="page-header">
+        <div>
+            <p class="eyebrow">SAMUHAMITRA</p>
+            <h1>Admin Dashboard</h1>
+            <p id="welcome-message">Loading account…</p>
+        </div>
+        <div class="header-actions">
+            <button id="refresh-button" type="button">Refresh data</button>
+            <a href="home.html">Back to site</a>
+        </div>
+    </header>
+
+    <main>
+        <p id="status-message" class="status" aria-live="polite">Loading saved records…</p>
+
+        <section class="dashboard-section">
+            <div class="section-heading">
+                <h2>Donations</h2>
+                <span id="donations-count" class="count">0</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Type</th><th>Quantity</th><th>Date & time</th><th>Orphanage</th><th>Saved</th></tr></thead>
+                    <tbody id="donations-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <div class="section-heading">
+                <h2>Fundraising</h2>
+                <span id="fundraising-count" class="count">0</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Name</th><th>Email</th><th>Amount</th><th>Orphanage</th><th>Status</th><th>Saved</th></tr></thead>
+                    <tbody id="fundraising-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <div class="section-heading">
+                <h2>Room guests</h2>
+                <span id="guests-count" class="count">0</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Room</th><th>Name</th><th>Contact</th><th>Notes</th><th>Updated</th></tr></thead>
+                    <tbody id="guests-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/admin.js"></script>
+</body>
+</html>
